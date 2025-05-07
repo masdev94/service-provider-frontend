@@ -1,11 +1,18 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-const app = createApp(App)
+import VueLazyload from "vue-lazyload";
 
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(router);
+app.use(VueLazyload, {
+  preLoad: 1.3,
+  attempt: 2,
+  loading: "/assets/placeholder.png",
+  error: "/assets/error.png",
+});
+app.mount("#app");

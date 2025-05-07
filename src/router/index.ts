@@ -6,6 +6,11 @@ const routes = [
     name: "Providers",
     component: () => import("../views/Providers.vue"),
   },
+  {
+    path: "/provider/:slug",
+    name: "Provider",
+    component: () => import("../views/Provider.vue"),
+  },
 ];
 
 const router = createRouter({
