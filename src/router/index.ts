@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: "/providers",
+    path: "/",
     name: "Providers",
     component: () => import("../views/Providers.vue"),
   },
